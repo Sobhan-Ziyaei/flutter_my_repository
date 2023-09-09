@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_my_repository/ui/screens/main_screen.dart';
+import 'package:flutter_my_repository/ui/screens/text_theme.dart';
 
 class AppRouter {
   Route<dynamic>? onGenerateRoute(RouteSettings settings) {
