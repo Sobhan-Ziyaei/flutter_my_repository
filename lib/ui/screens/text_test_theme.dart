@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+class TextTestTheme extends StatelessWidget {
+  const TextTestTheme({Key? key}) : super(key: key);
 
   static const screenId = '/text_theme';
   @override

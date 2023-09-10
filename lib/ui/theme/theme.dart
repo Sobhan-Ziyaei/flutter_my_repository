@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_my_repository/gen/fonts.gen.dart';
+import 'package:flutter_my_repository/ui/styles/shapes.dart';
 import 'package:flutter_my_repository/ui/theme/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTheme {
   static ThemeData lightTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: primaryColor,
+    scaffoldBackgroundColor: whiteColor,
+    // 
+    //-----------------------------------------------------------------------------
+    //Buttons
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        shape: getShapeWidget(10),
+        alignment: Alignment.center ,
+        backgroundColor: primaryColor ,
+        textStyle: TextStyle(
+          color: whiteColor ,
+          fontFamily: FontFamily.vazir ,
+          fontWeight: FontWeight.bold ,
+          fontSize: ScreenUtil().setWidth(12),
+        ),
+      ),
+    ),
+
+
 
     //-----------------------------------------------------------------------------
     textTheme: TextTheme(

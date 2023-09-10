@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_my_repository/ui/screens/text_theme.dart';
+import 'package:flutter_my_repository/ui/screens/button_screen.dart';
+import 'package:flutter_my_repository/ui/screens/text_test_theme.dart';
 
 class AppRouter {
   Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case MainScreen.screenId:
+      case TextTestTheme.screenId:
         return MaterialPageRoute(
-          builder: (context) => const MainScreen(),
+          builder: (context) => const TextTestTheme(),
+        );
+      case ButtonScreen.screenId:
+        return MaterialPageRoute(
+          builder: (context) => const ButtonScreen(),
         );
       default:
         return null;

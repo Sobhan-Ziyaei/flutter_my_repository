@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_my_repository/router/app_router.dart';
-import 'package:flutter_my_repository/ui/screens/text_theme.dart';
+import 'package:flutter_my_repository/ui/screens/button_screen.dart';
+import 'package:flutter_my_repository/ui/screens/text_test_theme.dart';
+import 'package:flutter_my_repository/ui/theme/colors.dart';
 import 'package:flutter_my_repository/ui/theme/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
+  //------------------------------------------------------
+  //برای اینکه در امولیتور بتوانیم تنظیمات دلخواه داشته باشیم
+    SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: whiteColor,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: blackColor,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
+  //
+  //-------------------------------------------------------
   runApp(
     MyApp(
       appRouter: AppRouter(),
@@ -24,7 +39,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           onGenerateRoute: appRouter.onGenerateRoute,
-          initialRoute: MainScreen.screenId,
+          initialRoute: ButtonScreen.screenId,
           theme: CustomTheme.lightTheme,
         );
       },
